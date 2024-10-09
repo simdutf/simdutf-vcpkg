@@ -22,6 +22,7 @@ jobs:
       with:
         vcpkgJsonGlob: "**/vcpkg.json"
         vcpkgDirectory: "${{ github.workspace }}/vcpkg"
+        vcpkgGitCommitId: "d0d081b3fc3680ce8ced2a88f9a7784884b679da"
     - name: Install simdutf
       run: |
         $VCPKG_ROOT/vcpkg install simdutf
