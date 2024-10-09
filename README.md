@@ -6,7 +6,7 @@ This project builds a simple executable that
 depends on simdutf, under Windows. 
 
 After installing vcpkg and installing
-simdutf through it (e.g., `vcpkg install simdutf:x64-windows`), you can build with CMake using a couple of command lines.
+simdutf through it (e.g., `vcpkg install simdutf:x64-windows` or `vcpkg install simdutf`), you can build with CMake using a couple of command lines.
 
 You need to pass the location of your `vcpkg/scripts/buildsystems/vcpkg.cmake`  file to CMake:
 
