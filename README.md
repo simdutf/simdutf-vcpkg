@@ -1,4 +1,5 @@
 # Simple simdutf demo for vcpkg
+[![Linux-CI](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/linux.yml/badge.svg)](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/linux.yml)
 [![Windows-CI](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/ci.yml/badge.svg)](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/ci.yml)
 
 This project builds a simple executable that
