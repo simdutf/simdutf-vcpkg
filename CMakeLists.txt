@@ -8,7 +8,7 @@ find_package(simdutf CONFIG REQUIRED)
 
 
 file(WRITE main.cpp "
-include <memory>
+#include <memory>
 
 #include \"simdutf.cpp\"
 #include \"simdutf.h\"
