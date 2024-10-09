@@ -1,0 +1,31 @@
+name: Linux-CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        - name: Linux
+        os: ubuntu-latest
+    env:
+      VCPKG_ROOT: ${{ github.workspace }}/vcpkg
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: Setup vcpkg
+      uses: lukka/run-vcpkg@v11
+      with:
+        vcpkgJsonGlob: "**/vcpkg.json"
+        vcpkgDirectory: "${{ github.workspace }}/vcpkg"
+    - name: Install simdutf
+      run: |
+        $VCPKG_ROOT/vcpkg install simdutf
+      shell: bash
+    - name: Configure
+      run:  cmake -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake -B build
+    - name: Build 
+      run: cmake --build build --verbose
