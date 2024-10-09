@@ -7,10 +7,11 @@ jobs:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
-      matrix:
-        - name: Linux
-        os: ubuntu-latest
+        fail-fast: false
+        matrix:
+          include:
+            - name: Linux
+              os: ubuntu-latest
     env:
       VCPKG_ROOT: ${{ github.workspace }}/vcpkg
     steps:
