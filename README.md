@@ -3,7 +3,7 @@
 [![Windows-CI](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/ci.yml/badge.svg)](https://github.com/simdutf/simdutf-vcpkg/actions/workflows/ci.yml)
 
 This project builds a simple executable that
-depends on simdutf, under Windows. 
+depends on simdutf, under Windows and Linux. 
 
 After installing vcpkg and installing
 simdutf through it (e.g., `vcpkg install simdutf:x64-windows` or `vcpkg install simdutf`), you can build with CMake using a couple of command lines.
